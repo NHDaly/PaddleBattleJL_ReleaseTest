@@ -3,5 +3,17 @@ script: ./runtests.sh
 os:
   - osx
 
+# ------ For git-lfs -----------
+before_install:
+  - brew install git-lfs
+  - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
+
+before_script:
+  - git lfs install
+  - git lfs pull
+ 
+# ------ /git-lfs -----------
+
+
 
 
