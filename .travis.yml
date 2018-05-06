@@ -1,0 +1,7 @@
+language: c  # trying to keep this as "standard" a Mac distribution as possible.
+script: ./runtests.sh
+os:
+  - osx
+
+
+
